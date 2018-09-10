@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传文件</title>
+    <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="{{ url_for('static',filename='js/rotate.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/zlajax.js') }}"></script>
+    <style>
+        img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+<img class="img01" src="../../static/ima/{{ filename }}">
+<form action="" method="post" enctype="multipart/form-data">
+    <table>
+        <tbody>
+        <tr>
+            <td>头像：</td>
+            <td><input type="file" name="avatar"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="上传"></td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+
+<button id="rotate">旋转</button>
+<button id="tongdao">通道</button>
+<button id="filter">滤镜</button>
+</body>
+</html>
